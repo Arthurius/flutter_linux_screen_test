@@ -31,7 +31,7 @@ SSH_PORT=$3
 #SNAP_HOST=panel
 #SSH_PORT=22
 
-SNAP_PACKAGE="flutter_linux_screen_test_dirty_amd64.snap"
+SNAP_PACKAGE="flutter-linux-screen-test_dirty_amd64.snap"
 
 if [ $LAUNCH_FROM_VSCODE = false ]; then
     cd ..

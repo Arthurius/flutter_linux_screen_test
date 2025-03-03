@@ -134,19 +134,11 @@ parts:
       - zip
     override-prime: ''
 
-  git-credentials:
-    plugin: dump
-    source: .
-    stage:
-      - .git-credentials # to stage files leading with a . you have to stage them explicitly
-
   flutter_screen_test:
-    after: [flutter-git, git-credentials]
+    after: [flutter-git]
     source: .
     plugin: nil
     override-build: |
-      # Set git credentials so we can pull private repositories in "pub get"
-      git config --global credential.helper "store --file $CRAFT_PART_BUILD/.git-credentials"
 
       # when building locally artifacts can pollute the container and cause builds to fail
       # this helps increase reliability for local builds
@@ -166,7 +158,6 @@ parts:
       ls $CRAFT_PART_INSTALL/bin/
 
     override-prime: |
-      rm .git-credentials
       craftctl default
 
     stage-packages:

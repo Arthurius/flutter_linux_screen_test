@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
       ),
       home: DefaultTabController(
         length: 3,
-        child: Scaffold(appBar: AppBar(
+        child: Scaffold(
+          appBar: AppBar(
             bottom: const TabBar(
               tabs: [
                 Tab(icon: Icon(Icons.list)),
@@ -31,13 +32,14 @@ class MyApp extends StatelessWidget {
             title: const Text('Linux Screen Tester'),
           ),
           body: const TabBarView(
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               ScrollScreen(),
               DrawScreen(),
               GestureScreen(),
             ],
           ),
-      ),
+        ),
       ),
     );
   }
