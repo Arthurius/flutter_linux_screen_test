@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -u
+
+echo "Redirecting output to journalctl"
+exec 1> >(logger -s -t "$SNAP_INSTANCE_NAME.$(basename $0)") 2>&1
+echo "Running $SNAP_INSTANCE_NAME.$(basename $0)"
+
+echo "Restarting"
+snapctl restart $SNAP_INSTANCE_NAME.daemon

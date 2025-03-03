@@ -1,0 +1,13 @@
+{
+    "dart.lineLength": 100,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "dart.runPubGetOnPubspecChanges": "never",
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": true,
+    "dcm.showUnusedCode": true,
+    "dcm.showUnusedFiles": true
+}
