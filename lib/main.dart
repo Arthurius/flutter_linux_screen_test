@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_linux_screen_test/draw/draw_screen.dart';
+import 'package:flutter_linux_screen_test/gesture/gesture_screen.dart';
 import 'package:flutter_linux_screen_test/scroll/scroll_screen.dart';
 
 void main() {
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
               tabs: [
                 Tab(icon: Icon(Icons.list)),
                 Tab(icon: Icon(Icons.draw)),
+                Tab(icon: Icon(Icons.gesture)),
               ],
             ),
             title: const Text('Linux Screen Tester'),
@@ -32,6 +34,7 @@ class MyApp extends StatelessWidget {
             children: [
               ScrollScreen(),
               DrawScreen(),
+              GestureScreen(),
             ],
           ),
       ),
